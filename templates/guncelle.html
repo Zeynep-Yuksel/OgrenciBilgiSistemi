@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <style>
+  table{  border:solid 5pt #607D8B;
+         background-color: #90A4AE;
+         margin-left:auto;
+         margin-right:auto ;
+         font-size:13pt;
+         font-weight:bold;}
+  form{ border:solid 2pt #607D8B;
+         background-color:#FAFAFA;
+        margin:3px 3px 3px 3px;
+        padding:8px 8px 8px 8px; }
+  caption{color:black;
+        font-size:20pt;
+        font-weight:bold;
+        margin:10px auto 10px auto}
+  input{  border:solid 2pt #607D8B;
+          padding:10px;
+          margin:10px 0 10px 10px;}
+  </style>
+
+<title>KAYIT GÜNCELLEME</title>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+<body>
+<table class="table">
+  <caption>KAYIT GÜNCELLEME</caption>
+    <tr>
+   <a  style=" position:absolute; top:20px; left:100px; font-size:20pt; font-weight:bold;"  class="nav-link active"  aria-current="page" href="/anasayfa">ANASAYFA</a>
+  </tr>
+  <tr>
+    <td>
+      <form method="post" action="/guncelle">
+          <div class="row mb-3">
+    <label for="inputno" class="col-sm-2 col-form-label">ÖĞRENCİ NO</label>
+    <div  class="col-sm-10">
+      <input type="text" class="form-control" name="ogrenci_no"  value="{{veriler.ogrenci no}}" id="inputno">
+    </div>
+     </div>
+
+  <div class="row mb-3">
+    <label for="inputAd" class="col-sm-2 col-form-label">AD</label>
+    <div  class="col-sm-10">
+      <input type="text" class="form-control" name="ad"  value="{{veriler.ogrenci no}}" id="inputAd">
+    </div>
+     </div>
+
+     <div class="row mb-3">
+    <label for="inputAd" class="col-sm-2 col-form-label">SOYAD</label>
+    <div  class="col-sm-10">
+      <input type="text" class="form-control"  name="soyad" value="{{veriler.ogrenci no}}" id="inputSoyad">
+    </div>
+      </div>
+
+     <div class="row mb-3">
+    <label for="inputAdres" class="col-sm-2 col-form-label">ADRES</label>
+    <div  class="col-sm-10">
+      <input type="text" class="form-control" name="adres"  value="{{veriler.ogrenci no}}" id="inputAdres">
+    </div>
+     </div>
+
+     <div class="row mb-3">
+    <label for="inputD_tarihi" class="col-sm-2 col-form-label">DOĞUM TARİHİ</label>
+    <div  class="col-sm-10">
+      <input type="date" class="form-control" name="dogum_tarihi" value="{{veriler.ogrenci no}}" id="inputD_tarihi">
+    </div>
+       </div>
+
+         <div class="row mb-3">
+    <label for="inputBolum_id" class="col-sm-2 col-form-label">BÖLÜM_ID</label>
+    <div  class="col-sm-10">
+      <input type="number" class="form-control" name="bolum_id"  value="{{veriler.ogrenci no}}"  id="inputBolum_id">
+    </div>
+     </div>
+            {% endfor %}
+          <input type="submit" value="GÜNCELLE">
+
+</form>
+         </td>
+    </tr>
+
+  </table>
+</body>
+</html>

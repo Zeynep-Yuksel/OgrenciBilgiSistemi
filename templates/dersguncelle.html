@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <style>
+  table{  border:solid 5pt #607D8B;
+         background-color: #90A4AE;
+         margin-left:auto;
+         margin-right:auto ;
+         font-size:13pt;
+         font-weight:bold;}
+  form{ border:solid 2pt #607D8B;
+         background-color:#FAFAFA;
+        margin:3px 3px 3px 3px;
+        padding:8px 8px 8px 8px; }
+  caption{color:black;
+        font-size:20pt;
+        font-weight:bold;
+        margin:10px auto 10px auto}
+  input{  border:solid 2pt #607D8B;
+          padding:10px;
+          margin:10px 0 10px 10px;}
+  </style>
+
+<title>DERS KAYIT GÜNCELLEME</title>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+<body>
+<table class="table">
+  <caption> DERS KAYIT GÜNCELLEME FORMU</caption>
+    <tr>
+   <a  style=" position:absolute; top:20px; left:100px; font-size:20pt; font-weight:bold;"  class="nav-link active"  aria-current="page" href="/anasayfa">ANASAYFA</a>
+  </tr>
+  <tr>
+    <td>
+      <form method="post" action="/dersguncelle">
+          <div class="row mb-3">
+    <label for="inputders_id" class="col-sm-2 col-form-label">DERS ID:</label>
+    <div  class="col-sm-10">
+      <input type="text" class="form-control" name="ders_id"   id="inputders_id">
+    </div>
+     </div>
+
+  <div class="row mb-3">
+    <label for="inputdersAd" class="col-sm-2 col-form-label"> DERS ADI</label>
+    <div  class="col-sm-10">
+      <input type="text" class="form-control" name="ders_adi"   id="inputdersAd">
+    </div>
+     </div>
+
+     <div class="row mb-3">
+    <label for="inputogretmen_id" class="col-sm-2 col-form-label">ÖĞRETMEN ID</label>
+    <div  class="col-sm-10">
+      <input type="text" class="form-control"  name="ogretmen_id"  id="inputogretmen_id">
+    </div>
+      </div>
+
+          <div class="row mb-3">
+    <label for="inputBolum_id" class="col-sm-2 col-form-label">BÖLÜM_ID</label>
+    <div  class="col-sm-10">
+      <input type="number" class="form-control" name="bolum_id"   id="inputBolum_id">
+    </div>
+     </div>
+
+          <input type="submit" value="GÜNCELLE">
+
+</form>
+         </td>
+    </tr>
+
+  </table>
+</body>
+</html>

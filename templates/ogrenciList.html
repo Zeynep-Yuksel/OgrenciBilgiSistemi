@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+   <link href="static/tablolar.css" rel="stylesheet">
+    <title>ÖĞRENCİLERİMİZ</title>
+    <style>
+         .button {
+         border: none;
+         color:black;
+         padding: 20px 34px;
+         text-align: center;
+         text-decoration: none;
+         display: inline-block;
+         font-size: 17px;
+         font-weight:bold;
+         margin: 4px 2px;
+         cursor: pointer;
+         }
+      </style>
+</head>
+<body>
+<table class="table">
+    <thead>
+  <tr>
+        <th scope="col">
+            <td><font></font>
+            <a href="/form" class ="button" style=" position:absolute; top:30px; right:90px; " data-toggle="modal" data-target="#modaledit">ÖĞRENCİ EKLE</a><font></font>
+        </td><font></font>
+        </th>
+    </tr>
+   <tr>
+   <a  style=" position:absolute; top:20px; left:100px; font-size:20pt; font-weight:bold;"  class="nav-link active"  aria-current="page" href="/anasayfa">ANASAYFA</a>
+  </tr>
+  <tr>
+        <th scope="th">ÖĞRENCİ NO</th>
+        <th scope="th">AD</th>
+        <th scope="th">SOYAD</th>
+        <th scope="th">ADRES</th>
+        <th scope="th">DOĞUM TARİHİ</th>
+        <th class="th">BÖLÜM ADI</th>
+        <th class="th">YAPILACAK İŞLEM</th>
+    </tr>
+  </thead>
+    <tbody>
+    {% for veriler in veri %}
+    <tr>
+        <th class="th" scope="row">{{veriler.ogrenci_no}}</th>
+        <td class="td">{{veriler.ad}}</td>
+        <td class="td">{{veriler.soyad}}</td>
+        <td class="td">{{veriler.adres}}</td>
+        <td class="td">{{veriler.dogum_tarihi}}</td>
+        <td class="td">{{veriler.bolumAdi.bolum_adi}}</td>
+
+
+        <td><font></font>
+            <a href="/guncelleform" class ="button" class="btn btn-warning btn-xs" data-toggle="modal" data-target="#modaledit{{ogrenci_no}}">GÜNCELLE</a><font></font>
+            <a href="/sil/{{veriler.ogrenci_no}}"  class ="button" class="btn btn-danger btn-xs" onclick="return confirm('SİLMEK İSTEDİĞİNİZE EMİN MİSİNİZ ?')">SİL</a><font></font>
+        </td><font></font>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+  <link href="static/tablolar.css" rel="stylesheet" >
+    <style>
+         .button {
+         border: none;
+         color: black;
+         padding: 20px 34px;
+         text-align: center;
+         text-decoration: none;
+         display: inline-block;
+         font-size: 17px;
+         font-weight:bold;
+         margin: 4px 2px;
+         cursor: pointer;
+         }
+      </style>
+    <title>DERSLER</title>
+</head>
+<body>
+<table class="table">
+
+    <thead>
+      <tr>
+        <th scope="col">
+            <td><font></font>
+            <a href="/dersform" style=" position:absolute; top:30px; right:90px;" class ="button"
+               data-toggle="modal" data-target="#modaledit">DERS EKLE</a><font></font>
+        </td><font></font>
+        </th>
+    </tr>
+      <tr>
+   <a  style=" position:absolute; top:20px; left:100px; font-size:20pt; font-weight:bold;"  class="nav-link active"
+       aria-current="page" href="/anasayfa">ANASAYFA</a>
+  </tr>
+    <tr>
+        <th scope="th">DERS ID</th>
+        <th scope="th">DERS ADI</th>
+        <th scope="th">ÖĞRETİM ÜYESİ ADI</th>
+        <th scope="th">BÖLÜM ADI</th>
+    </tr>
+  </thead>
+    <tbody>
+    {% for veriler in veri %}
+    <tr>
+        <th class="th" scope="row">{{veriler.ders_id}}</th>
+        <td class="td">{{veriler.ders_adi}}</td>
+        <td class="td">{{veriler.ogretmenAdi.ad}}</td>
+         <td class="td">{{veriler.bolumAdi.bolum_adi}}</td>
+         <td class="td"><font></font>
+             <a href="/dersguncelleform" class ="button" class="btn btn-warning btn-xs" data-toggle="modal"
+                data-target="#modaledit{{ders_id}}">GÜNCELLE</a><font></font>
+            <a href="/ders_sil/{{veriler.ders_id}}"  class ="button" style=" weight:10px;"
+               onclick="return confirm(' DERSİ SİLMEK İSTEDİĞİNİZE EMİN MİSİNİZ ?')">SİL</a><font></font>
+        </td><font></font>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+</body>
+</html>

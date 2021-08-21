@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <link href="static/tablolar.css" rel="stylesheet">
+    <title>DÖNEMLERE GÖRE ALINABİLECEK DERSLER</title>
+</head>
+<body>
+<table class="table">
+    <thead>
+    <tr>
+   <a  style=" position:absolute; top:20px; left:100px; font-size:20pt; font-weight:bold;"  class="nav-link active"  aria-current="page" href="/anasayfa">ANASAYFA</a>
+  </tr>
+    <tr>
+        <th scope="th">ID</th>
+        <th scope="th">DERS ADI</th>
+        <th scope="th">ÖĞRENCİNİN ADI</th>
+        <th scope="th">ÖĞRENCİNİN DÖNEMİ</th>
+    </tr>
+  </thead>
+    <tbody>
+    {% for veriler in veri %}
+    <tr>
+        <th class="th">{{veriler.id}}</th>
+        <th class="th"> {{veriler.dersAdi.ders_adi}}</th>
+        <td class="td">{{veriler.ogrenciAdi.ad}}</td>
+        <td class="td">{{veriler.donemi}}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+</body>
+</html>

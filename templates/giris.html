@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+  form{ border:solid 3pt #607D8B;
+         background-color:#FAFAFA;
+       margin-top: 200px;
+      margin-bottom:20px;
+      margin-left:550px;
+      margin-right: 20px;
+         font-size:13pt;
+         font-weight:bold;
+          width:20%;
+           padding: 10px 20px;}
+
+  input{  border:solid 2pt #607D8B;
+          margin:10px 10px;
+          padding: 10px 20px;
+          width:50%;
+        }
+   .label{  margin:10px 10px;
+      padding: 10px 20px;
+   width:50%;}
+  </style>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GİRİŞ SAYFASI</title>
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</head>
+<body>
+  <section class="hero is-info is-fullheight">
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-half">
+            <form action ="/giris"  method="POST">
+              <div class="field">
+                <label class="label">E-MAİL:</label>
+                <div class="control has-icons-left has-icons-right">
+                  <input class="input" type="email" name="mail" placeholder="E-Mail"  value="{{
+          request.form.mail }}">
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-user"></i>
+                  </span>
+                </div>
+              </div>
+              <div class="field">
+                <label class="label">ŞİFRE:</label>
+                <p class="control has-icons-left">
+                  <input class="input" type="password" name="sifre" placeholder="Şifre" value="{{
+          request.form.sifre }}">
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-lock"></i>
+                  </span>
+                </p>
+              </div>
+              <div class="field">
+                <p class="control">
+                  <button type="submit" class="button is-success" onclick="menu.html">GİRİŞ</button>
+                </p>
+              </div>
+              {% if error %}
+        <p class="error"><strong>HATA:</strong> {{ error }}
+      {% endif %}
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

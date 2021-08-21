@@ -1,0 +1,15 @@
+table {  border:solid 2pt black;
+         margin:80px;}
+caption{color:black;
+        font-size:20pt;
+        font-weight:bold;}
+
+.td{ border:solid 1pt black;
+     padding:10pt;
+   width:10%;}
+.th{ border:solid 1pt black;
+     padding:10pt;
+   width:10%;
+    font-size:13pt;}
+   tbody tr:nth-child(odd){background-color:	#778899;
+}
