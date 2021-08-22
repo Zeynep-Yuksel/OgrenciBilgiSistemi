@@ -34,8 +34,6 @@ def MENU():
 @app.route('/ogrenci')
 def OgrenciList():
     veri = Ogrenci.query.all()
-    #name = Bolum.bolum_id.expression.foreign_keys.pop().name
-  #  bolumler = Bolum.query.filter_by(bolum_id = veri.bolum_id)
     return render_template('ogrenciList.html', veri=veri)
 
 
