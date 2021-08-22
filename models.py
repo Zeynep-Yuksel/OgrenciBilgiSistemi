@@ -85,7 +85,6 @@ class OgrenciDers(db.Model):
         self.ogrenci_no = ogrenci_no
         self.donemi = donemi
 
-#sanırım bitti. Çalıştır bakalım olmamış yine olmamış
 
 
 
